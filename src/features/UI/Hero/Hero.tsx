@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { Navigation } from '../../Layout/Navigation/Navigation'
 import { NavigationActions } from '../../Layout/Navigation/NavigationActions/NavigationActions'
 import { CustomLink } from '../CustomLink/CustomLink'
@@ -6,6 +8,8 @@ import { Logo } from '../Logo/Logo'
 import styled from './Hero.module.css'
 
 export const Hero = () => {
+  const { t } = useTranslation()
+
   return (
     <div className={styled.hero}>
       <Navigation>
@@ -13,7 +17,7 @@ export const Hero = () => {
         <NavigationActions>
           <LanguageSelect />
           <CustomLink path="/login" modifier="cta">
-            Zaloguj się
+            {t('links.auth-login')}
           </CustomLink>
         </NavigationActions>
       </Navigation>
