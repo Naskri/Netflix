@@ -1,0 +1,25 @@
+.custom-link:link,
+.custom-link:visited {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.custom-link--cta:link,
+.custom-link--cta:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 4px;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+@media (max-width: 36rem) {
+  .custom-link:link,
+  .custom-link:visited {
+    width: fit-content;
+  }
+}

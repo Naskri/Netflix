@@ -1,6 +1,8 @@
 :root {
   --color-primary: #e50914;
-  --color-neutral: #ffffff;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dividor: #232323;
 }
 
 *,
@@ -13,4 +15,5 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--color-black);
 }

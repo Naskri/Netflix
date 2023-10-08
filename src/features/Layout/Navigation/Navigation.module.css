@@ -1,0 +1,12 @@
+.navigation {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 36rem) {
+  .navigation {
+    flex-direction: column;
+  }
+}

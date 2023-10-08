@@ -1,9 +1,9 @@
-import { Logo } from '../../features/UI/Logo/Logo'
+import { Hero } from '../../features/UI/Hero/Hero'
 
 export const Home = () => {
   return (
-    <h1>
-      <Logo />
-    </h1>
+    <>
+      <Hero />
+    </>
   )
 }

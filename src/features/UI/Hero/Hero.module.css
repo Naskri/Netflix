@@ -1,0 +1,48 @@
+.hero {
+  --height: 38rem;
+  position: relative;
+  min-height: var(--height);
+  padding: 2rem 8rem;
+  z-index: 1;
+  background-image: url('images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 10px solid var(--color-dividor);
+}
+
+.hero::after {
+  --color-gradient: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    var(--color-gradient) 0,
+    rgba(0, 0, 0, 0) 60%,
+    var(--color-gradient) 100%
+  );
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 87.5rem) {
+  .hero {
+    --height: 38rem;
+  }
+}
+
+@media (max-width: 71.25rem) {
+  .hero {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .hero {
+    --height: 32rem;
+  }
+}
