@@ -1,5 +1,18 @@
 {
   "links": {
     "auth-login": "Zaloguj się"
+  },
+  "hero": {
+    "title": "Hity filmowe, popularne seriale i wiele więcej już od 29 zł.",
+    "description": "Dołącz już dziś. Anuluj, kiedy chcesz."
+  },
+  "newsletter": {
+    "title": "Zaczynamy oglądać? Wprowadź adres e‑mail, aby utworzyć lub odnowić konto.",
+    "label": "Adres e-mail",
+    "button": "Rozpocznij"
+  },
+  "validation": {
+    "emailRequired": "Adres e-mail jest wymagany.",
+    "emailInvalid": "Wprowadź prawidłowy adres e-mail."
   }
 }

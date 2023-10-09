@@ -1,5 +1,18 @@
 {
   "links": {
     "auth-login": "Sign in"
+  },
+  "hero": {
+    "title": "Enjoy big movies, hit series and more from 29 zł.",
+    "description": "Join today. Cancel anytime."
+  },
+  "newsletter": {
+    "title": "Ready to watch? Enter your email to create or restart your membership.",
+    "label": "Email address",
+    "button": "Get Started"
+  },
+  "validation": {
+    "emailRequired": "Email address is required!",
+    "emailInvalid": "Please enter a valid email address."
   }
 }
