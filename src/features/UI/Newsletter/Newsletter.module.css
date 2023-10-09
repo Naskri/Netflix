@@ -1,0 +1,37 @@
+.newsletter {
+  max-width: 42.5rem;
+  margin: 5rem auto 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter__description {
+  color: var(--color-white);
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.newsletter__content {
+  margin-top: 1.5rem;
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (max-width: 36rem) {
+  .newsletter__content {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 27rem) {
+  .newsletter {
+    margin-top: 2rem;
+  }
+}

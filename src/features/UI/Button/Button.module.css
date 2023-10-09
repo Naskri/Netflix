@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.button--newsletter {
+  flex-grow: 0.2;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 1.25rem 1.125rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 36rem) {
+  .button--newsletter {
+    align-self: center;
+  }
+}

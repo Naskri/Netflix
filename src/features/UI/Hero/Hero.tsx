@@ -6,6 +6,8 @@ import { CustomLink } from '../CustomLink/CustomLink'
 import { LanguageSelect } from '../LanguageSelect/LanguageSelect'
 import { Logo } from '../Logo/Logo'
 import styled from './Hero.module.css'
+import { HeroContent } from './HeroContent/HeroContent'
+import { Newsletter } from '../Newsletter/Newsletter'
 
 export const Hero = () => {
   const { t } = useTranslation()
@@ -21,6 +23,8 @@ export const Hero = () => {
           </CustomLink>
         </NavigationActions>
       </Navigation>
+      <HeroContent />
+      <Newsletter />
     </div>
   )
 }
