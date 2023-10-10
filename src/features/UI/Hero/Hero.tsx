@@ -13,7 +13,7 @@ export const Hero = () => {
   const { t } = useTranslation()
 
   return (
-    <div className={styled.hero}>
+    <section className={styled.hero}>
       <Navigation>
         <Logo />
         <NavigationActions>
@@ -25,6 +25,6 @@ export const Hero = () => {
       </Navigation>
       <HeroContent />
       <Newsletter />
-    </div>
+    </section>
   )
 }

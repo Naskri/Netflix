@@ -14,5 +14,9 @@
   "validation": {
     "emailRequired": "Email address is required!",
     "emailInvalid": "Please enter a valid email address."
+  },
+  "zPattern": {
+    "title1": "Enjoy on your TV",
+    "description1": "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more."
   }
 }

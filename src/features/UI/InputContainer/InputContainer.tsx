@@ -25,11 +25,12 @@ export const InputContainer = forwardRef<HTMLInputElement, InputContainerProps>(
         </div>
         {error && (
           <span className={styled.input__error}>
-            <VscError /> {t(error)}
+            <VscError /> {t(error as any)}
           </span>
         )}
       </div>
     )
   }
 )
+
 InputContainer.displayName = 'Input'

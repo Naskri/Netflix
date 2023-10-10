@@ -14,5 +14,9 @@
   "validation": {
     "emailRequired": "Adres e-mail jest wymagany.",
     "emailInvalid": "Wprowadź prawidłowy adres e-mail."
+  },
+  "zPattern": {
+    "title1": "Oglądaj na telewizorze",
+    "description1": "Oglądaj na telewizorach Smart TV, konsolach PlayStation i Xbox, odtwarzaczach Chromecast, Apple TV oraz Blu-ray i nie tylko."
   }
 }
