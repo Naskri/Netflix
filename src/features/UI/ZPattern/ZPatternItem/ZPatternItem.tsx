@@ -9,11 +9,11 @@ export type ZPatternItemData = {
   image?: string
 }
 
-export const ZPatternItem = ({ title, description, video, image }: ZPatternItemData) => {
+export const ZPatternItem = ({ id, title, description, video, image }: ZPatternItemData) => {
   const { t } = useTranslation()
 
   return (
-    <div className={styled['zpattern-item']}>
+    <div className={`${styled['zpattern-item']} ${styled[`zpattern-item--${id}`]}`}>
       <div className={styled['z-pattern-item__content']}>
         <div className={styled['zpattern-item__typography']}>
           <h2 className={styled['z-pattern-item__title']}>{t(title)}</h2>
@@ -21,13 +21,9 @@ export const ZPatternItem = ({ title, description, video, image }: ZPatternItemD
         </div>
         <div className={styled['z-pattern-item__visual']}>
           <img src={image} alt="" className={styled['z-pattern-item__image']} />
-          <video
-            src={video}
-            autoPlay
-            muted
-            loop
-            className={styled['z-pattern-item__video']}
-          ></video>
+          {video && (
+            <video src={video} autoPlay muted loop className={styled['z-pattern-item__video']} />
+          )}
         </div>
       </div>
     </div>
