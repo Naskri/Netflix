@@ -1,7 +1,10 @@
 .faq-description-container {
   --background: rgb(45, 45, 45);
-  padding: 2rem 5rem 2rem 1rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 5rem 0 1rem;
   background-color: var(--background);
+  transition: 0.5s;
 }
 
 .faq-description {
@@ -20,4 +23,25 @@
 
 .faq-item.active .icon {
   transform: rotate(45deg);
+}
+
+.faq-item.active .faq-description-container {
+  max-height: fit-content;
+  padding: 2rem 5rem 2rem 1rem;
+}
+
+@media (max-width: 55rem) {
+  .faq-description-container {
+    padding-right: 2rem;
+  }
+
+  .faq-description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .faq-description {
+    font-size: 1rem;
+  }
 }

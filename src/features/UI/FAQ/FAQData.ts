@@ -9,7 +9,7 @@ export const FAQData = [
       },
       {
         id: 2,
-        subdescription: 'faq.subdescription1',
+        description: 'faq.subdescription1',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const FAQData = [
       },
       {
         id: 2,
-        subdescription: 'faq.subdescription3',
+        description: 'faq.subdescription3',
       },
     ],
   },
@@ -67,7 +67,7 @@ export const FAQData = [
       },
       {
         id: 2,
-        subdescription: 'faq.subdescription6',
+        description: 'faq.subdescription6',
       },
     ],
   },

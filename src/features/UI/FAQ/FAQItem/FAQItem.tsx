@@ -5,8 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 type FAQItemDescription = {
   id: number
-  description?: string
-  subdescription?: string
+  description: string
 }
 
 type FAQItemData = {
@@ -32,35 +31,25 @@ export const FAQItem = ({
     <li className={`${styled['faq-item']} ${active && styled.active}`}>
       <Button
         modifier="faq"
-        id="faq-button-1"
-        aria-expanded="true"
-        aria-controls="faq-1"
+        id={`faq-button-${id}`}
+        aria-expanded={active}
+        aria-controls={`faq-${id}`}
         onClick={() => onSelectFaq(id)}
       >
         {t(title)} <FiPlus className={styled.icon} />
       </Button>
-      {active && (
-        <div
-          className={styled['faq-description-container']}
-          aria-labelledby="faq-button-1"
-          id="faq-1"
-        >
-          {descriptions.map((description) => (
-            <>
-              {description.description && (
-                <p key={description.id} className={styled['faq-description']}>
-                  {t(description.description)}
-                </p>
-              )}
-              {description.subdescription && (
-                <p key={description.id} className={styled['faq-description']}>
-                  {t(description.subdescription)}
-                </p>
-              )}
-            </>
-          ))}
-        </div>
-      )}
+
+      <div
+        className={styled['faq-description-container']}
+        aria-labelledby={`faq-button-${id}`}
+        id={`faq-${id}`}
+      >
+        {descriptions.map((description) => (
+          <p className={styled['faq-description']} key={description.id}>
+            {t(description.description)}
+          </p>
+        ))}
+      </div>
     </li>
   )
 }

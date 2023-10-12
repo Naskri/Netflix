@@ -1,7 +1,7 @@
 .newsletter {
   max-width: 42.5rem;
   margin: 5rem auto 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
