@@ -18,7 +18,12 @@ export const InputContainer = forwardRef<HTMLInputElement, InputContainerProps>(
     return (
       <div className={styled.container}>
         <div className={styled.input__container}>
-          <input ref={ref} id={id} {...rest} className={styled.input} />
+          <input
+            ref={ref}
+            id={id}
+            {...rest}
+            className={`${styled.input} ${error && styled['input--error']}`}
+          />
           <label htmlFor={id} className={styled.input__label}>
             {label}
           </label>
