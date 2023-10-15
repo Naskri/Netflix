@@ -18,3 +18,23 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--color-black);
 }
+
+/* Custom Components */
+
+.backdrop::after {
+  --color-gradient: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    var(--color-gradient) 0,
+    rgba(0, 0, 0, 0) 60%,
+    var(--color-gradient) 100%
+  );
+  background-color: rgba(0, 0, 0, 0.4);
+}

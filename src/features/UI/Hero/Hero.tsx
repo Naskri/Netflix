@@ -13,7 +13,7 @@ export const Hero = () => {
   const { t } = useTranslation()
 
   return (
-    <section className={styled.hero}>
+    <section className={`${styled.hero} backdrop`}>
       <Navigation>
         <Logo />
         <NavigationActions>

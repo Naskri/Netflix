@@ -17,6 +17,17 @@
   padding: 0 1rem;
 }
 
+.custom-link--help:link,
+.custom-link--help:visited {
+  --color: rgba(255, 255, 255);
+  color: var(--color);
+  transition: 0.3s;
+}
+
+.custom-link--help:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 36rem) {
   .custom-link:link,
   .custom-link:visited {

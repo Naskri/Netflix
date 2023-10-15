@@ -3,9 +3,11 @@ import { Hero } from '../../features/UI/Hero/Hero'
 import { Newsletter } from '../../features/UI/Newsletter/Newsletter'
 import { ZPattern } from '../../features/UI/ZPattern/ZPattern'
 
+import styled from './Home.module.css'
+
 export const Home = () => {
   return (
-    <main>
+    <main className={styled.home}>
       <Hero />
       <ZPattern />
       <FAQ />

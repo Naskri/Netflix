@@ -1,6 +1,7 @@
 {
   "links": {
-    "auth-login": "Sign in"
+    "auth-login": "Sign in",
+    "auth-register": "Sign up now"
   },
   "hero": {
     "title": "Enjoy big movies, hit series and more from 29 zł.",
@@ -13,7 +14,11 @@
   },
   "validation": {
     "emailRequired": "Email address is required!",
-    "emailInvalid": "Please enter a valid email address."
+    "emailInvalid": "Please enter a valid email address.",
+    "passwordRequired": "Passowrd is required!",
+    "passwordMin": "Password must be atleast 6 characters.",
+    "passwordConfirmRequired": "Confirm password is required!",
+    "passwordsNotMatch": "Passwords are not the same!"
   },
   "zPattern": {
     "title1": "Enjoy on your TV",
@@ -41,5 +46,13 @@
     "title6": "Is Netflix good for kids?",
     "description6": "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.",
     "subdescription6": "Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
+  },
+  "form": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "passwordConfirmLabel": "Confirm password",
+    "help": "Need help?",
+    "helpRegister": "New to Netflix?",
+    "helpLogin": "Already in Netflix?"
   }
 }

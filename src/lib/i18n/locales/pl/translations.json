@@ -1,6 +1,7 @@
 {
   "links": {
-    "auth-login": "Zaloguj się"
+    "auth-login": "Zaloguj się",
+    "auth-register": "Zarejestruj się"
   },
   "hero": {
     "title": "Hity filmowe, popularne seriale i wiele więcej już od 29 zł.",
@@ -13,7 +14,11 @@
   },
   "validation": {
     "emailRequired": "Adres e-mail jest wymagany.",
-    "emailInvalid": "Wprowadź prawidłowy adres e-mail."
+    "emailInvalid": "Wprowadź prawidłowy adres e-mail.",
+    "passwordRequired": "Hasło jest wymagane.",
+    "passwordMin": "Hasło musi mieć minimum 6 znaków.",
+    "passwordConfirmRequired": "Hasło potwierdzające jest wymagane.",
+    "passwordsNotMatch": "Hasła się różnią!"
   },
   "zPattern": {
     "title1": "Oglądaj na telewizorze",
@@ -41,5 +46,13 @@
     "title6": "Czy Netflix jest odpowiedni dla dzieci?",
     "description6": "W ramach członkostwa w serwisie Netflix otrzymujesz dostęp do specjalnej sekcji dla dzieci. Młodzi widzowie mogą oglądać tam filmy, seriale i programy przeznaczone właśnie dla nich, a rodzice mają nad wszystkim kontrolę.",
     "subdescription6": "Profile dla dzieci chronione są kodem PIN kontroli rodzicielskiej, który uniemożliwia dostęp do treści przekraczających określone kategorie wiekowe, a także pozwala blokować konkretne tytuły."
+  },
+  "form": {
+    "emailLabel": "E-mail",
+    "passwordLabel": "Hasło",
+    "passwordConfirmLabel": "Hasło potwierdzające",
+    "help": "Potrzebujesz pomocy?",
+    "helpRegister": "Nie masz jeszcze konta w serwisie Netflix?",
+    "helpLogin": "Masz już konto w Netflix?"
   }
 }
