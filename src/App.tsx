@@ -2,6 +2,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Home } from './pages/Home/Home'
 import { Login } from './pages/Login/Login'
 import { Register } from './pages/Register/Register'
+import { ToastContainer } from 'react-toastify'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import 'react-toastify/dist/ReactToastify.css'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,13 @@ const router = createBrowserRouter([
   },
 ])
 
+const queryClient = new QueryClient()
+
 export const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </QueryClientProvider>
+  )
 }

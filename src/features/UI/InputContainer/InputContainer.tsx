@@ -15,6 +15,7 @@ type InputContainerProps = {
   error?: string
   type?: InputTypes
   required?: boolean
+  disabled?: boolean
 }
 
 export const InputContainer = forwardRef<HTMLInputElement, InputContainerProps>(
