@@ -8,9 +8,13 @@ import styled from './../Form.module.css'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginSchema, LoginSchemaType } from './LoginSchema'
+import { useLogin } from './useLogin'
+import { SpinnerMini } from '../../UI/SpinnerMini/SpinnerMini'
 
 export const LoginForm = () => {
   const { t } = useTranslation()
+
+  const { userLogin, isLogin } = useLogin()
 
   const {
     register,
@@ -21,7 +25,9 @@ export const LoginForm = () => {
     resolver: zodResolver(LoginSchema),
   })
 
-  const submitHandler = () => {
+  const submitHandler = ({ email, password }: LoginSchemaType) => {
+    userLogin({ email, password })
+
     reset({
       email: '',
       password: '',
@@ -38,6 +44,7 @@ export const LoginForm = () => {
           error={errors?.email?.message}
           type={InputTypes.text}
           required
+          disabled={isLogin}
           {...register('email')}
         />
         <InputContainer
@@ -46,10 +53,11 @@ export const LoginForm = () => {
           error={errors?.password?.message}
           type={InputTypes.password}
           required
+          disabled={isLogin}
           {...register('password')}
         />
       </div>
-      <Button modifier="form">{t('links.auth-login')}</Button>
+      <Button modifier="form">{isLogin ? <SpinnerMini /> : t('links.auth-login')}</Button>
       <CustomLink path="/help" modifier="help">
         {t('form.help')}
       </CustomLink>
