@@ -1,0 +1,17 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search__input {
+  --color: rgba(255, 255, 255);
+  --background: rgba(22, 22, 22, 0.7);
+  border: none;
+  font-family: inherit;
+  background-color: var(--background);
+  color: var(--color);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+}

@@ -18,7 +18,9 @@
 }
 
 .custom-link--help:link,
-.custom-link--help:visited {
+.custom-link--help:visited,
+.custom-link--navigation:link,
+.custom-link--navigation:visited {
   --color: rgba(255, 255, 255);
   color: var(--color);
   transition: 0.3s;

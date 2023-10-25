@@ -1,0 +1,5 @@
+.dashboard-navigation {
+  position: relative;
+  z-index: 9999;
+  padding: 2rem 0;
+}
