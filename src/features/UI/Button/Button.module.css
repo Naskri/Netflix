@@ -63,6 +63,11 @@
   color: var(--color-white);
 }
 
+.button--sign-out {
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
 .button--more-info {
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 .wrapper {
-  --width: 71.25rem;
+  --width: 65.25rem;
   max-width: var(--width);
   margin: 0 auto;
   padding: 0 1rem;

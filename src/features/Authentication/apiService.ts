@@ -1,4 +1,4 @@
-import { supabase } from '../../lib/i18n/supabase/supabase'
+import { supabase, supabaseURL } from '../../lib/i18n/supabase/supabase'
 
 export type AuthServiceProps = {
   email: string
@@ -9,6 +9,11 @@ export const register = async ({ email, password }: AuthServiceProps) => {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
+    options: {
+      data: {
+        avatar: `${supabaseURL}/storage/v1/object/public/avatars/avatar-1.png`,
+      },
+    },
   })
 
   if (error) {
@@ -46,4 +51,12 @@ export const getCurrentUser = async () => {
   }
 
   return user
+}
+
+export const signOut = async () => {
+  const { error } = await supabase.auth.signOut()
+
+  if (error) {
+    throw new Error(error.message)
+  }
 }

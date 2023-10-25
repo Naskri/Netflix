@@ -12,7 +12,7 @@
 .dashboard-hero__content {
   position: relative;
   z-index: 12;
-  padding: 20rem 0;
+  padding-top: 20rem;
   max-width: 500px;
 }
 
