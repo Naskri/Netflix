@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import 'react-toastify/dist/ReactToastify.css'
 import { Dashboard } from './pages/Dashboard/Dashboard'
 import { ProtectedRoute } from './features/UI/ProtectedRoute/ProtectedRoute'
+import { Account } from './pages/Account/Account'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         <Dashboard />
       </ProtectedRoute>
     ),
+  },
+  {
+    path: '/account',
+    element: <Account />,
   },
 ])
 

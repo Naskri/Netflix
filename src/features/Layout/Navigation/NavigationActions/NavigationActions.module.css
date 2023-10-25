@@ -15,5 +15,6 @@
   .navigation-actions {
     height: 2.5rem;
     margin-left: 0;
+    justify-self: end;
   }
 }

@@ -5,3 +5,19 @@
   gap: 1rem;
   margin-left: 2rem;
 }
+
+@media (max-width: 61rem) {
+  .list {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 36rem) {
+  .list {
+    grid-row: 3/4;
+    flex-wrap: wrap;
+  }
+}

@@ -19,7 +19,7 @@ export const Avatar = () => {
         {isOptionsShowed && (
           <ul className={styled.avatar__options}>
             <li className={styled.avatar__option}>
-              <CustomLink path="account" modifier="navigation">
+              <CustomLink path="../account" modifier="navigation">
                 Account
               </CustomLink>
             </li>

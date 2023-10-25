@@ -3,10 +3,21 @@
   gap: 1rem;
 }
 
+@media (max-width: 61rem) {
+  .navigation--dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 36rem) {
   .navigation {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .navigation--dashboard {
+    grid-template-rows: repeat(3, 1fr);
   }
 }
