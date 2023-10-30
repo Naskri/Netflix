@@ -11,6 +11,9 @@ import { Account } from './pages/Account/Account'
 import { TVShows } from './pages/TVShows/TVShows'
 import { MyList } from './pages/MyList/MyList'
 import { Root } from './pages/Root/Root'
+import { createPortal } from 'react-dom'
+import { CustomModal } from './features/UI/Modal/Modal'
+import { useModal } from './context/ModalContext'
 
 const router = createBrowserRouter([
   {
@@ -56,10 +59,13 @@ const router = createBrowserRouter([
 const queryClient = new QueryClient()
 
 export const App = () => {
+  const { isOpen } = useModal()
+
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
       <ToastContainer />
+      {isOpen && createPortal(<CustomModal />, document.querySelector('#modal')!)}
     </QueryClientProvider>
   )
 }

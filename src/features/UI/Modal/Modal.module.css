@@ -1,3 +1,19 @@
 .modal {
-  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content {
+  position: relative;
+  padding: 2rem;
+  max-width: 640px;
+  width: 100%;
 }

@@ -20,6 +20,10 @@ body {
   overflow-x: hidden;
 }
 
+body[data-modal] {
+  overflow: hidden;
+}
+
 /* Custom Components */
 
 .backdrop::after {

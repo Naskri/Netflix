@@ -1,3 +1,4 @@
+import { useModal } from '../../../context/ModalContext'
 import { Button } from '../../UI/Button/Button'
 import { Wrapper } from '../../UI/Wrapper/Wrapper'
 import styled from './DashboardHero.module.css'
@@ -6,6 +7,8 @@ import { GrCircleInformation } from 'react-icons/gr'
 
 export const DashboardHero = () => {
   const { movie } = useRandomMovie()
+
+  const { open } = useModal()
 
   return (
     <div
@@ -23,7 +26,7 @@ export const DashboardHero = () => {
             0,
             180
           )}...`}</p>
-          <Button modifier="more-info">
+          <Button modifier="more-info" onClick={() => open(movie)}>
             <GrCircleInformation />
             More info
           </Button>

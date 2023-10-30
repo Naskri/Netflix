@@ -4,6 +4,7 @@ import { AiOutlineArrowDown, AiOutlinePlus } from 'react-icons/ai'
 
 import styled from './MoviesItemDetails.module.css'
 import { GENRES } from './helpers'
+import { useModal } from '../../../../context/ModalContext'
 
 type MoviesItemDetailsProps = {
   item: any
@@ -11,11 +12,13 @@ type MoviesItemDetailsProps = {
 }
 
 export const MoviesItemDetails = ({ item, isHovered }: MoviesItemDetailsProps) => {
+  const { open } = useModal()
+
   return (
     <div className={styled.details}>
       <img
         src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-        alt=""
+        alt={`${item.original_title || item.name}`}
         className={!isHovered ? styled.image : styled.details__image}
       />
       {isHovered && (
@@ -27,7 +30,12 @@ export const MoviesItemDetails = ({ item, isHovered }: MoviesItemDetailsProps) =
             <Button modifier="details">
               <AiOutlinePlus />
             </Button>
-            <Button modifier="details">
+            <Button
+              modifier="details"
+              onClick={() => {
+                open(item)
+              }}
+            >
               <AiOutlineArrowDown />
             </Button>
           </div>
