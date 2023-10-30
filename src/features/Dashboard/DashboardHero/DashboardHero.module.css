@@ -1,8 +1,8 @@
 .dashboard-hero {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: white;
   background-size: cover;
@@ -12,7 +12,7 @@
 .dashboard-hero__content {
   position: relative;
   z-index: 12;
-  padding-top: 20rem;
+  padding-top: 15rem;
   max-width: 500px;
 }
 
@@ -26,4 +26,17 @@
   line-height: 1.5;
   font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  .dashboard-hero__content {
+    padding-top: 20rem;
+  }
+  .dashboard-hero__title {
+    font-size: 2rem;
+  }
+
+  .dashboard-hero__description {
+    font-size: 1rem;
+  }
 }

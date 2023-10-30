@@ -1,12 +1,6 @@
-import { MOVIES_API } from '../../Movies/MoviesServices/MoviesAPI'
-
-const generateRandomMovieNumber = (min = 1, max = 20) => {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-export const getRandomMovie = async () => {
+export const getCategoryMovies = async (categoryURL: string) => {
   try {
-    const response = await fetch(MOVIES_API.POPULAR_MOVIES.url, {
+    const response = await fetch(categoryURL, {
       method: 'GET',
       headers: {
         accept: 'application/json',
@@ -20,7 +14,7 @@ export const getRandomMovie = async () => {
 
     const data = await response.json()
 
-    return data.results[generateRandomMovieNumber()]
+    return data.results
   } catch (err: unknown) {
     if (err instanceof Error) {
       throw new Error(err.message)

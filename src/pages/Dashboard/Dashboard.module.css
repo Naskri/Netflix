@@ -2,3 +2,8 @@
   position: relative;
   min-height: 100vh;
 }
+
+.dashboard__rest {
+  position: relative;
+  margin-top: -10rem;
+}
