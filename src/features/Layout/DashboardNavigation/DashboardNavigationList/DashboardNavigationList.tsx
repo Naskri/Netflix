@@ -27,19 +27,6 @@ const dashboardNavigationLinks = [
     modifier: 'navigation',
   },
   {
-    id: 3,
-    link: 'Movies',
-    path: '/dashboard/movies',
-    modifier: 'navigation',
-  },
-  {
-    id: 4,
-    link: 'New & Popular',
-    path: '/dashboard/new',
-
-    modifier: 'navigation',
-  },
-  {
     id: 5,
     link: 'My List',
     path: '/dashboard/my',

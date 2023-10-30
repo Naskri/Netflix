@@ -1,3 +1,5 @@
+import { TVSeries } from '../../features/Movies/TVSeries'
+
 export const TVShows = () => {
-  return <div>Hello!</div>
+  return <TVSeries />
 }

@@ -9,8 +9,6 @@ import { Dashboard } from './pages/Dashboard/Dashboard'
 import { ProtectedRoute } from './features/UI/ProtectedRoute/ProtectedRoute'
 import { Account } from './pages/Account/Account'
 import { TVShows } from './pages/TVShows/TVShows'
-import { Movies } from './pages/Movies/Movies'
-import { NewPopular } from './pages/NewPopular/NewPopular'
 import { MyList } from './pages/MyList/MyList'
 import { Root } from './pages/Root/Root'
 
@@ -42,14 +40,6 @@ const router = createBrowserRouter([
       {
         path: 'tv-shows',
         element: <TVShows />,
-      },
-      {
-        path: 'movies',
-        element: <Movies />,
-      },
-      {
-        path: 'popular',
-        element: <NewPopular />,
       },
       {
         path: 'my',

@@ -1,0 +1,16 @@
+.item {
+  height: 100%;
+}
+
+.image__container {
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}

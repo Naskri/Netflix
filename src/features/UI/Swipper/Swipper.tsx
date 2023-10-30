@@ -4,6 +4,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import styled from './Swipper.module.css'
 import { useRef } from 'react'
+import { MoviesItem } from '../../Movies/MoviesItem/MoviesItem'
 
 type CustomSwipperProps = {
   slides: any
@@ -41,11 +42,7 @@ export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
           key={item.backdrop_path}
           className={`${styled.swiper__slide} ${styled[`swiper__slide--${modifier}`]}`}
         >
-          <img
-            src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
-            alt=""
-            className={styled.image}
-          />
+          <MoviesItem {...item} />
         </SwiperSlide>
       ))}
       <button
