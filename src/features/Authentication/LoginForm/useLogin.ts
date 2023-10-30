@@ -10,7 +10,7 @@ export const useLogin = () => {
     mutationFn: ({ email, password }: AuthServiceProps) => login({ email, password }),
     onSuccess: () => {
       toast.success('Succesfully logged!')
-      navigate('/dashboard')
+      navigate('/dashboard/home')
     },
     onError: (error) => {
       if (error instanceof Error) {

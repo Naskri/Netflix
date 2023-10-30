@@ -30,6 +30,12 @@
   text-decoration: underline;
 }
 
+.custom-link--active:link,
+.custom-link--active:visited {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
 @media (max-width: 36rem) {
   .custom-link:link,
   .custom-link:visited {

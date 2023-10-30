@@ -15,7 +15,7 @@ export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
 
   return (
     <Swiper
-      spaceBetween={2}
+      spaceBetween={10}
       loop={true}
       className={styled.swiper}
       keyboard={true}
@@ -38,7 +38,7 @@ export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
       ></button>
       {slides?.map((item: any) => (
         <SwiperSlide
-          key={item}
+          key={item.backdrop_path}
           className={`${styled.swiper__slide} ${styled[`swiper__slide--${modifier}`]}`}
         >
           <img

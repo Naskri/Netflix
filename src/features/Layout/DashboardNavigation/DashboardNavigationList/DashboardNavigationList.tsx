@@ -5,7 +5,7 @@ export const DashboardNavigationList = () => {
   return (
     <ul className={styled.list}>
       {dashboardNavigationLinks.map((link) => (
-        <CustomLink key={link.id} path={link.path} modifier={link.modifier}>
+        <CustomLink key={link.id} path={link.path} modifier={link.modifier} type="navigation">
           {link.link}
         </CustomLink>
       ))}
@@ -17,7 +17,7 @@ const dashboardNavigationLinks = [
   {
     id: 1,
     link: 'Home',
-    path: '/dashboard',
+    path: '/dashboard/home',
     modifier: 'navigation',
   },
   {

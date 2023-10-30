@@ -4,7 +4,7 @@ import { CustomSwipper } from '../../UI/Swipper/Swipper'
 type MoviesRowProps = {
   title: string
   data: any
-  modifier: string
+  modifier?: string
 }
 
 export const MoviesRow = ({ title, data, modifier }: MoviesRowProps) => {
