@@ -1,3 +1,5 @@
+import { MyListMovies } from '../../features/Movies/MyListMovies'
+
 export const MyList = () => {
-  return <div>My List!</div>
+  return <MyListMovies />
 }

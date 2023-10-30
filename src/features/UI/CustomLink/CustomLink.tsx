@@ -6,7 +6,7 @@ type CustomLinkProps = {
   children: ReactNode
   path: string
   modifier?: string
-  type: string
+  type?: string
 }
 
 export const CustomLink = ({ children, path, modifier, type }: CustomLinkProps) => {

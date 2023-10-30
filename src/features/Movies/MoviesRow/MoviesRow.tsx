@@ -12,7 +12,11 @@ export const MoviesRow = ({ title, data, modifier }: MoviesRowProps) => {
     <div className={styled['movies-row']}>
       <h2 className={styled.title}>{title}</h2>
 
-      <CustomSwipper slides={data} modifier={modifier} />
+      {data?.length > 0 ? (
+        <CustomSwipper slides={data} modifier={modifier} />
+      ) : (
+        <h3 className={styled.empty}>Your list is empty!</h3>
+      )}
     </div>
   )
 }

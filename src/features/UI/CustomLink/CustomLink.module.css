@@ -4,6 +4,13 @@
   text-decoration: none;
 }
 
+.logo:link,
+.logo:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .custom-link--cta:link,
 .custom-link--cta:visited {
   display: flex;

@@ -3,7 +3,7 @@ import styled from './Logo.module.css'
 
 export const Logo = () => {
   return (
-    <CustomLink path="/">
+    <CustomLink path="/" modifier="logo">
       <svg viewBox="0 0 111 30" className={styled.logo} aria-hidden="true" focusable="false">
         <g>
           <path

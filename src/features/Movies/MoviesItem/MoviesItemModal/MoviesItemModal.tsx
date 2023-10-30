@@ -1,12 +1,25 @@
 import { BsPlay } from 'react-icons/bs'
 import { Button } from '../../../UI/Button/Button'
 import styled from './MoviesItemModal.module.css'
-import { AiOutlinePlus, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlinePlus, AiOutlineClose, AiOutlineMinus } from 'react-icons/ai'
 import { GENRES } from '../MoviesItemDetails/helpers'
 import { useModal } from '../../../../context/ModalContext'
+import { useMyListMovies } from '../../useMyListMovies'
+import { useAddMovie } from '../../useAddMovie'
+import { useUser } from '../../../Authentication/useUser'
+import { useDeleteMovie } from '../../useDeleteMovie'
 
 export const MoviesItemModal = ({ item }: any) => {
   const { close } = useModal()
+  const { deleteMovie } = useDeleteMovie()
+  const { addMovie } = useAddMovie()
+
+  const { user } = useUser()
+  const { data: movies } = useMyListMovies()
+
+  const isInsideList = movies?.some(
+    (movie) => movie.original_title === item.original_title || movie.original_title === item.name
+  )
 
   return (
     <div className={styled['movies-item']}>
@@ -24,20 +37,46 @@ export const MoviesItemModal = ({ item }: any) => {
           <Button modifier="details">
             <BsPlay />
           </Button>
-          <Button modifier="details">
-            <AiOutlinePlus />
-          </Button>
+          {!isInsideList && (
+            <Button
+              modifier="details"
+              onClick={() =>
+                addMovie({
+                  backdrop_path: item.backdrop_path,
+                  original_title: item.original_title || item.name,
+                  vote_average: item.vote_average,
+                  overview: item.overview,
+                  genre: '',
+                  user_id: user?.id,
+                })
+              }
+            >
+              <AiOutlinePlus />
+            </Button>
+          )}
+          {isInsideList && (
+            <Button
+              modifier="details"
+              onClick={() => deleteMovie(item.original_title || item.name)}
+            >
+              <AiOutlineMinus />
+            </Button>
+          )}
         </div>
         <p className={styled['movies-item__vote']}>Averate vote: {item.vote_average} %</p>
         <div className={styled['movies-item__overview']}>
-          <p className={styled.description}>{item.overview}</p>
+          <p className={styled.description}>{`${item.overview.slice(0, 300)}...`}</p>
           <div className={styled['movies-item__genres']}>
             Genre:
-            {item.genre_ids.map((genre: keyof typeof GENRES) => (
-              <span key={genre} className={styled.genre}>
-                {GENRES[genre]}
-              </span>
-            ))}
+            {Array.isArray(item.genre_ids) ? (
+              item.genre_ids.map((genre: keyof typeof GENRES) => (
+                <p key={genre} className={styled.genre}>
+                  {GENRES[genre]}
+                </p>
+              ))
+            ) : (
+              <p className={styled.genre}>{GENRES[Number(item.genre) as keyof typeof GENRES]}</p>
+            )}
           </div>
         </div>
       </div>

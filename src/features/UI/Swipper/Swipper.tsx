@@ -39,7 +39,7 @@ export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
       ></button>
       {slides?.map((item: any) => (
         <SwiperSlide
-          key={item.backdrop_path}
+          key={item.id}
           className={`${styled.swiper__slide} ${styled[`swiper__slide--${modifier}`]}`}
         >
           <MoviesItem {...item} />
