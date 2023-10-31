@@ -15,9 +15,10 @@ import { CustomLink } from '../../../UI/CustomLink/CustomLink'
 type MoviesItemDetailsProps = {
   item: any
   isHovered?: boolean
+  type: 'movie' | 'serie'
 }
 
-export const MoviesItemDetails = ({ item, isHovered }: MoviesItemDetailsProps) => {
+export const MoviesItemDetails = ({ item, isHovered, type }: MoviesItemDetailsProps) => {
   const { open, close, isOpen } = useModal()
   const { addMovie } = useAddMovie()
   const { deleteMovie } = useDeleteMovie()
@@ -43,7 +44,7 @@ export const MoviesItemDetails = ({ item, isHovered }: MoviesItemDetailsProps) =
       />
       <div className={styled.details__content}>
         <div className={styled.details__actions}>
-          <CustomLink path={`/watch/${item.id}`} modifier="play">
+          <CustomLink path={`/watch/${item.id}?type=${type}`} modifier="play">
             <BsPlay />
           </CustomLink>
 

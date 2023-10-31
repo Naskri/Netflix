@@ -2,12 +2,17 @@ import { useState } from 'react'
 import styled from './MoviesItem.module.css'
 import { MoviesItemDetails } from './MoviesItemDetails/MoviesItemDetails'
 
-export const MoviesItem = (item: any) => {
+type MoviesItemProps = {
+  item: any
+  type: 'movie' | 'serie'
+}
+
+export const MoviesItem = ({ item, type }: MoviesItemProps) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
     <div
-      className={styled.item}
+      className={styled.movie}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -18,7 +23,7 @@ export const MoviesItem = (item: any) => {
           className={!isHovered ? styled.image : styled.details__image}
         />
       ) : (
-        <MoviesItemDetails item={item} isHovered={isHovered} />
+        <MoviesItemDetails item={item} isHovered={isHovered} type={type} />
       )}
     </div>
   )

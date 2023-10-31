@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import styled from './Video.module.css'
 import { useVideo } from './useVideo'
 import { useModal } from '../../context/ModalContext'
@@ -10,18 +10,24 @@ import { useTranslation } from 'react-i18next'
 export const Video = () => {
   const { close } = useModal()
   const { id } = useParams()
+  const [searchParams] = useSearchParams()
+
+  const type = searchParams.get('type') || 'movie'
 
   useEffect(() => {
     close()
   }, [])
 
-  const { video, isLoading } = useVideo(Number(id))
+  const { video, isLoading } = useVideo({ movieID: Number(id), type })
   const { t } = useTranslation()
 
   return (
     <div className={styled.video}>
       {isLoading && <Spinner />}
-      {!isLoading && video.length > 0 && (
+      {!isLoading && video && video?.length === 0 && (
+        <h1 className={styled.video__title}>{t('movies.not-video')}</h1>
+      )}
+      {video?.length > 0 && (
         <ReactPlayer
           muted={true}
           playing={true}
@@ -30,9 +36,6 @@ export const Video = () => {
           controls
           url={`https://www.youtube.com/watch?v=${video[0].key}&controls=1`}
         />
-      )}
-      {!isLoading && video.length === 0 && (
-        <h1 className={styled.video__title}>{t('movies.not-video')}</h1>
       )}
     </div>
   )

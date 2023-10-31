@@ -6,9 +6,10 @@ type MoviesRowProps = {
   title: string
   data: any
   modifier?: string
+  type: 'movie' | 'serie'
 }
 
-export const MoviesRow = ({ title, data, modifier }: MoviesRowProps) => {
+export const MoviesRow = ({ title, data, modifier, type }: MoviesRowProps) => {
   const { t } = useTranslation()
 
   return (
@@ -16,7 +17,7 @@ export const MoviesRow = ({ title, data, modifier }: MoviesRowProps) => {
       <h2 className={styled.title}>{title}</h2>
 
       {data?.length > 0 ? (
-        <CustomSwipper slides={data} modifier={modifier} />
+        <CustomSwipper slides={data} modifier={modifier} type={type} />
       ) : (
         <h3 className={styled.empty}>{t('validation.emptyList')}</h3>
       )}

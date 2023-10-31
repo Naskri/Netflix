@@ -1,10 +1,15 @@
 import { useQuery } from 'react-query'
-import { getMovieVideo } from './VideoServices/VideoServices'
+import { getVideo } from './VideoServices/VideoServices'
 
-export const useVideo = (movieID: number) => {
+type useVideoProps = {
+  movieID: number
+  type: string
+}
+
+export const useVideo = ({ movieID, type }: useVideoProps) => {
   const { data: video, isLoading } = useQuery({
     queryKey: ['video', movieID],
-    queryFn: () => getMovieVideo(movieID),
+    queryFn: () => getVideo({ movieID, type }),
   })
 
   return { video, isLoading } as const

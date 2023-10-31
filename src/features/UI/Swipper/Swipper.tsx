@@ -9,9 +9,10 @@ import { MoviesItem } from '../../Movies/MoviesItem/MoviesItem'
 type CustomSwipperProps = {
   slides: any
   modifier?: string
+  type: 'movie' | 'serie'
 }
 
-export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
+export const CustomSwipper = ({ slides, modifier, type }: CustomSwipperProps) => {
   const sliderRef = useRef<SwiperType>()
 
   return (
@@ -42,7 +43,7 @@ export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
           key={item.id}
           className={`${styled.swiper__slide} ${styled[`swiper__slide--${modifier}`]}`}
         >
-          <MoviesItem {...item} />
+          <MoviesItem item={item} type={type} />
         </SwiperSlide>
       ))}
       <button

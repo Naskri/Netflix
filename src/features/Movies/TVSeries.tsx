@@ -15,12 +15,12 @@ export const TVSeries = () => {
 
   return (
     <>
-      <MoviesRow title={t('series.popular')} data={popular} />
-      <MoviesRow title={t('series.action')} data={action} />
-      <MoviesRow title={t('series.top')} data={top} modifier="bigger" />
-      <MoviesRow title={t('series.comedies')} data={comedies} />
-      <MoviesRow title={t('series.kids')} data={kids} />
-      <MoviesRow title={t('series.mystery')} data={mystery} />
+      <MoviesRow title={t('series.popular')} data={popular} type="serie" />
+      <MoviesRow title={t('series.action')} data={action} type="serie" />
+      <MoviesRow title={t('series.top')} data={top} modifier="bigger" type="serie" />
+      <MoviesRow title={t('series.comedies')} data={comedies} type="serie" />
+      <MoviesRow title={t('series.kids')} data={kids} type="serie" />
+      <MoviesRow title={t('series.mystery')} data={mystery} type="serie" />
     </>
   )
 }

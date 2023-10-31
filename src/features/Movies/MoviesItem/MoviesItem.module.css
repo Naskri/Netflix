@@ -1,8 +1,8 @@
-.item {
+.movie {
   height: 100%;
 }
 
-.item--active {
+.movie--active {
   position: relative;
   z-index: 9999;
 }

@@ -1,9 +1,16 @@
-const VIDEO_API_URL = 'https://api.themoviedb.org/3/movie/'
+const VIDEO_API_URL = 'https://api.themoviedb.org/3/'
 
-export const getMovieVideo = async (movieID: number) => {
+type VideoProps = {
+  movieID: number
+  type: string
+}
+
+export const getVideo = async ({ movieID, type }: VideoProps) => {
   try {
     const response = await fetch(
-      `${VIDEO_API_URL}${movieID}/videos?language=${navigator.language}`,
+      `${VIDEO_API_URL}${type === 'serie' ? 'tv' : type}/${movieID}/videos?language=${
+        navigator.language
+      }`,
       {
         method: 'GET',
         headers: {
