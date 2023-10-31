@@ -11,30 +11,28 @@ export const Video = () => {
   const { close } = useModal()
   const { id } = useParams()
   const [searchParams] = useSearchParams()
-
   const type = searchParams.get('type') || 'movie'
+  const { video, isLoading } = useVideo({ movieID: Number(id), type })
+  const { t } = useTranslation()
 
   useEffect(() => {
     close()
   }, [])
 
-  const { video, isLoading } = useVideo({ movieID: Number(id), type })
-  const { t } = useTranslation()
-
   return (
     <div className={styled.video}>
       {isLoading && <Spinner />}
-      {!isLoading && video && video?.length === 0 && (
+      {!isLoading && video && video?.results?.length === 0 && (
         <h1 className={styled.video__title}>{t('movies.not-video')}</h1>
       )}
-      {video?.length > 0 && (
+      {video && video?.results?.length > 0 && (
         <ReactPlayer
           muted={true}
           playing={true}
           height="100%"
           width="100%"
           controls
-          url={`https://www.youtube.com/watch?v=${video[0].key}&controls=1`}
+          url={`https://www.youtube.com/watch?v=${video.results[0].key}&controls=1`}
         />
       )}
     </div>

@@ -1,3 +1,5 @@
+import { VideosSchema } from './VideoSchema'
+
 const VIDEO_API_URL = 'https://api.themoviedb.org/3/'
 
 type VideoProps = {
@@ -26,7 +28,9 @@ export const getVideo = async ({ movieID, type }: VideoProps) => {
 
     const data = await response.json()
 
-    return data.results
+    const parsedVideosData = VideosSchema.parse(data)
+
+    return parsedVideosData
   } catch (err: unknown) {
     if (err instanceof Error) {
       throw new Error(err.message)
