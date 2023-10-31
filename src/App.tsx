@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home/Home'
 import { Login } from './pages/Login/Login'
 import { Register } from './pages/Register/Register'
@@ -11,50 +11,10 @@ import { Account } from './pages/Account/Account'
 import { TVShows } from './pages/TVShows/TVShows'
 import { MyList } from './pages/MyList/MyList'
 import { Root } from './pages/Root/Root'
+import { Watch } from './pages/Watch/Watch'
+import { useModal } from './context/ModalContext'
 import { createPortal } from 'react-dom'
 import { CustomModal } from './features/UI/Modal/Modal'
-import { useModal } from './context/ModalContext'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    path: '/dashboard',
-    element: (
-      <ProtectedRoute>
-        <Dashboard />
-      </ProtectedRoute>
-    ),
-    children: [
-      {
-        path: 'home',
-        element: <Root />,
-      },
-      {
-        path: 'tv-shows',
-        element: <TVShows />,
-      },
-      {
-        path: 'my',
-        element: <MyList />,
-      },
-    ],
-  },
-  {
-    path: '/account',
-    element: <Account />,
-  },
-])
 
 const queryClient = new QueryClient()
 
@@ -63,9 +23,29 @@ export const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      <ToastContainer />
-      {isOpen && createPortal(<CustomModal />, document.querySelector('#modal')!)}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="home" element={<Root />} />
+            <Route path="tv-shows" element={<TVShows />} />
+            <Route path="my" element={<MyList />} />
+          </Route>
+          <Route path="watch/:id" element={<Watch />} />
+          <Route path="account" element={<Account />} />
+        </Routes>
+        <ToastContainer />
+        {isOpen && createPortal(<CustomModal />, document.querySelector('#modal')!)}
+      </BrowserRouter>
     </QueryClientProvider>
   )
 }

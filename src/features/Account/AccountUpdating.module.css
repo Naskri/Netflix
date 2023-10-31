@@ -1,5 +1,5 @@
 .account-updating {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .account-updating__title {
@@ -20,4 +20,10 @@
 
 .avatar {
   height: 8rem;
+}
+
+@media (max-width: 576px) {
+  .account-updating {
+    margin-top: 15rem;
+  }
 }

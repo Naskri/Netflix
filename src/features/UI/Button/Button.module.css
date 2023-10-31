@@ -89,16 +89,8 @@
   border: 3px solid var(--color-dividor);
 }
 
-.button--details:nth-of-type(1) {
-  background-color: var(--color-white);
-}
-
 .button--details:last-of-type {
   margin-left: auto;
-}
-
-.button--details:nth-of-type(1) svg {
-  color: var(--color-black);
 }
 
 .button--details svg {
@@ -121,6 +113,11 @@
   color: var(--color-white);
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.button--video-btn {
+  padding: 10px;
+  color: var(--color-primary);
 }
 
 @media (max-width: 55rem) {

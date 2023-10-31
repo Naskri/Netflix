@@ -11,7 +11,15 @@ export const MoviesItem = (item: any) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <MoviesItemDetails item={item} isHovered={isHovered} />
+      {!isHovered ? (
+        <img
+          src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
+          alt={`${item.original_title || item.name}`}
+          className={!isHovered ? styled.image : styled.details__image}
+        />
+      ) : (
+        <MoviesItemDetails item={item} isHovered={isHovered} />
+      )}
     </div>
   )
 }

@@ -4,11 +4,14 @@ import { Button } from '../Button/Button'
 import styled from './Avatar.module.css'
 import { CustomLink } from '../CustomLink/CustomLink'
 import { useSignout } from '../../Authentication/useSignout'
+import { useTranslation } from 'react-i18next'
 
 export const Avatar = () => {
   const { user } = useUser()
   const { signoutFn } = useSignout()
   const [isOptionsShowed, setIsOptionsShowed] = useState(false)
+
+  const { t } = useTranslation()
 
   return (
     user && (
@@ -20,12 +23,12 @@ export const Avatar = () => {
           <ul className={styled.avatar__options}>
             <li className={styled.avatar__option}>
               <CustomLink path="../account" modifier="navigation">
-                Account
+                {t('avatar.account')}
               </CustomLink>
             </li>
             <li className={styled.avatar__option}>
               <Button modifier="sign-out" onClick={signoutFn}>
-                Sign out
+                {t('avatar.signout')}
               </Button>
             </li>
           </ul>

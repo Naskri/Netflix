@@ -18,7 +18,8 @@
     "passwordRequired": "Hasło jest wymagane.",
     "passwordMin": "Hasło musi mieć minimum 6 znaków.",
     "passwordConfirmRequired": "Hasło potwierdzające jest wymagane.",
-    "passwordsNotMatch": "Hasła się różnią!"
+    "passwordsNotMatch": "Hasła się różnią!",
+    "emptyList": "Twoja lista jest pusta."
   },
   "zPattern": {
     "title1": "Oglądaj na telewizorze",
@@ -54,5 +55,58 @@
     "help": "Potrzebujesz pomocy?",
     "helpRegister": "Nie masz jeszcze konta w serwisie Netflix?",
     "helpLogin": "Masz już konto w Netflix?"
+  },
+  "navigation": {
+    "movies": "Filmy",
+    "series": "Seriale",
+    "list": "Moja Lista"
+  },
+  "avatar": {
+    "account": "Profil",
+    "signout": "Wyloguj",
+    "change": "Zmień swój avatar"
+  },
+  "movies": {
+    "vote": "Średnia ocena",
+    "list": "Twoja lista",
+    "popular": "Popularne na Netflix",
+    "horror": "Horrory",
+    "upcoming": "Nadchodzące",
+    "comedies": "Komedie",
+    "action": "Filmy akcji",
+    "mystery": "Filmy tajemnicze",
+    "not-video": "Nie znaleziono video"
+  },
+  "series": {
+    "popular": "Popularne na Netflix",
+    "action": "Seriale akcji",
+    "top": "Nawyżej oceniane",
+    "comedies": "Komedie",
+    "kids": "Seriale dla dzieci",
+    "mystery": "Seriale tajemnicze"
+  },
+  "buttons": {
+    "more": "Więcej informacji"
+  },
+  "genre": {
+    "horror": "Horror",
+    "mystery": "Tajemnicze",
+    "action": "Akcja",
+    "animation": "Animowany",
+    "comedy": "Komedia",
+    "adventure": "Przygodowy",
+    "crime": "Kryminalny",
+    "documentary": "Dokumentalny",
+    "drama": "Dramat",
+    "family": "Rodzinny",
+    "fantasy": "Fantastyczny",
+    "history": "Historyczny",
+    "music": "Muzyczny",
+    "romance": "Romantyczny",
+    "science": "Science Fiction",
+    "tv": "Telewizyjny",
+    "thriller": "Thriller",
+    "war": "Wojenny",
+    "western": "Western"
   }
 }

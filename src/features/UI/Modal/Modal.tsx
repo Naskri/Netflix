@@ -1,5 +1,5 @@
 import { useModal } from '../../../context/ModalContext'
-import { MoviesItemModal } from '../../Movies/MoviesItem/MoviesItemModal/MoviesItemModal'
+import { MoviesItemDetails } from '../../Movies/MoviesItem/MoviesItemDetails/MoviesItemDetails'
 import styled from './Modal.module.css'
 import FocusTrap from 'focus-trap-react'
 
@@ -10,7 +10,7 @@ export const CustomModal = () => {
     <FocusTrap>
       <div className={styled.modal} onClick={close}>
         <div className={styled.modal__content} onClick={(e) => e.stopPropagation()}>
-          <MoviesItemModal item={modalContent} />
+          <MoviesItemDetails item={modalContent} />
         </div>
       </div>
     </FocusTrap>

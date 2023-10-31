@@ -18,7 +18,8 @@
     "passwordRequired": "Passowrd is required!",
     "passwordMin": "Password must be atleast 6 characters.",
     "passwordConfirmRequired": "Confirm password is required!",
-    "passwordsNotMatch": "Passwords are not the same!"
+    "passwordsNotMatch": "Passwords are not the same!",
+    "emptyList": "Your list is empty."
   },
   "zPattern": {
     "title1": "Enjoy on your TV",
@@ -54,5 +55,58 @@
     "help": "Need help?",
     "helpRegister": "New to Netflix?",
     "helpLogin": "Already in Netflix?"
+  },
+  "navigation": {
+    "movies": "Movies",
+    "series": "TV Shows",
+    "list": "My List"
+  },
+  "avatar": {
+    "account": "Account",
+    "signout": "Sign out",
+    "change": "Change avatar"
+  },
+  "movies": {
+    "vote": "Average vote",
+    "list": "Your list",
+    "popular": "Popular on Netflix",
+    "horror": "Horrors",
+    "upcoming": "Upcoming",
+    "comedies": "Comedies",
+    "action": "Action movies",
+    "mystery": "Mystery movies",
+    "not-video": "No video found"
+  },
+  "series": {
+    "popular": "Popular on Netflix",
+    "action": "Action series",
+    "top": "Top Rated",
+    "comedies": "Comedies",
+    "kids": "Kids series",
+    "mystery": "Mystery series"
+  },
+  "buttons": {
+    "more": "More info"
+  },
+  "genre": {
+    "horror": "Horror",
+    "mystery": "Mystery",
+    "action": "Action",
+    "animation": "Animation",
+    "comedy": "Comedy",
+    "adventure": "Adventure",
+    "crime": "Crime",
+    "documentary": "Documentary",
+    "drama": "Drama",
+    "family": "Family",
+    "fantasy": "Fantasy",
+    "history": "History",
+    "music": "Music",
+    "romance": "Romance",
+    "science": "Science Fiction",
+    "tv": "TV",
+    "thriller": "Thriller",
+    "war": "War",
+    "western": "Western"
   }
 }

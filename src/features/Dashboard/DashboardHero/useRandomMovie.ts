@@ -6,12 +6,13 @@ export const useRandomMovie = () => {
     data: movie,
     isError,
     isLoading,
+    refetch,
   } = useQuery({
     queryKey: ['randomMovie'],
     queryFn: getRandomMovie,
-    retry: false,
-    refetchOnWindowFocus: false,
   })
+
+  if (!movie) refetch()
 
   return { movie, isError, isLoading } as const
 }

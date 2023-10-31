@@ -1,6 +1,7 @@
 import { MoviesRow } from './MoviesRow/MoviesRow'
-import { useMovies } from './useMovies'
+import { useMovies } from './MoviesServices/useMovies'
 import { MOVIES_API } from './MoviesServices/MoviesAPI'
+import { useTranslation } from 'react-i18next'
 
 export const Movies = () => {
   const { data: popular } = useMovies(MOVIES_API.POPULAR_MOVIES)
@@ -9,14 +10,17 @@ export const Movies = () => {
   const { data: comedies } = useMovies(MOVIES_API.COMEDIES_MOVIES)
   const { data: actions } = useMovies(MOVIES_API.ACTION_MOVIES)
   const { data: mystery } = useMovies(MOVIES_API.MYSTERY_MOVIES)
+
+  const { t } = useTranslation()
+
   return (
     <>
-      <MoviesRow title="Popular on Netflix" data={popular} />
-      <MoviesRow title="Horror Movies" data={horror} />
-      <MoviesRow title="Upcoming" data={upcoming} modifier="bigger" />
-      <MoviesRow title="Comedies movies" data={comedies} />
-      <MoviesRow title="Action movies" data={actions} />
-      <MoviesRow title="Mystery movies" data={mystery} />
+      <MoviesRow title={t('movies.popular')} data={popular} />
+      <MoviesRow title={t('movies.horror')} data={horror} />
+      <MoviesRow title={t('movies.upcoming')} data={upcoming} modifier="bigger" />
+      <MoviesRow title={t('movies.comedies')} data={comedies} />
+      <MoviesRow title={t('movies.action')} data={actions} />
+      <MoviesRow title={t('movies.mystery')} data={mystery} />
     </>
   )
 }

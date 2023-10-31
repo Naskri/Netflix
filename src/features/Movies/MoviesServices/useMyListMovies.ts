@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
-import { getMovies } from './MoviesServices/MoviesServices'
-import { useUser } from '../Authentication/useUser'
+import { getMovies } from './MoviesServices'
+import { useUser } from '../../Authentication/useUser'
 
 export const useMyListMovies = () => {
   const { user } = useUser()

@@ -52,3 +52,9 @@ export const CustomSwipper = ({ slides, modifier }: CustomSwipperProps) => {
     </Swiper>
   )
 }
+
+/*
+  TODO
+
+  QUERY.
+*/

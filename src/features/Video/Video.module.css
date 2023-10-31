@@ -1,0 +1,12 @@
+.video {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.video__title {
+  color: var(--color-white);
+}

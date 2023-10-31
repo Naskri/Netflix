@@ -1,12 +1,14 @@
 import { CustomLink } from '../../../UI/CustomLink/CustomLink'
 import styled from './DashboardNavigationList.module.css'
+import { useTranslation } from 'react-i18next'
 
 export const DashboardNavigationList = () => {
+  const { t } = useTranslation()
   return (
     <ul className={styled.list}>
       {dashboardNavigationLinks.map((link) => (
         <CustomLink key={link.id} path={link.path} modifier={link.modifier} type="navigation">
-          {link.link}
+          {t(link.link)}
         </CustomLink>
       ))}
     </ul>
@@ -16,19 +18,19 @@ export const DashboardNavigationList = () => {
 const dashboardNavigationLinks = [
   {
     id: 1,
-    link: 'Home',
+    link: 'navigation.movies',
     path: '/dashboard/home',
     modifier: 'navigation',
   },
   {
     id: 2,
-    link: 'TV Shows',
+    link: 'navigation.series',
     path: '/dashboard/tv-shows',
     modifier: 'navigation',
   },
   {
     id: 5,
-    link: 'My List',
+    link: 'navigation.list',
     path: '/dashboard/my',
     modifier: 'navigation',
   },

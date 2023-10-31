@@ -1,0 +1,13 @@
+.genres {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre {
+  font-size: 0.833rem;
+  font-weight: 500;
+}

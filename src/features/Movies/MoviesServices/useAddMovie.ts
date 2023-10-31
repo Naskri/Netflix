@@ -1,14 +1,14 @@
 import { useMutation, useQueryClient } from 'react-query'
+import { addMovieToList } from './MoviesServices'
 import { toast } from 'react-toastify'
-import { deleteMovieFromList } from './MoviesServices/MoviesServices'
 
-export const useDeleteMovie = () => {
+export const useAddMovie = () => {
   const queryClient = useQueryClient()
 
-  const { mutate: deleteMovie, isLoading } = useMutation({
-    mutationFn: (title: string) => deleteMovieFromList(title),
+  const { mutate: addMovie, isLoading } = useMutation({
+    mutationFn: (movie: any) => addMovieToList(movie),
     onSuccess: () => {
-      toast.success('Movie is succesfully deleted!')
+      toast.success('Movie was added to your list!')
       queryClient.invalidateQueries({ queryKey: ['movies'] })
     },
     onError: (error) => {
@@ -18,5 +18,5 @@ export const useDeleteMovie = () => {
     },
   })
 
-  return { deleteMovie, isLoading } as const
+  return { addMovie, isLoading } as const
 }

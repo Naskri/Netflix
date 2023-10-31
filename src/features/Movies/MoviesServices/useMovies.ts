@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query'
-import { getCategoryMovies } from './MoviesServices/MoviesServices'
+import { getCategoryMovies } from './MoviesServices'
 
 type Category = {
   name: string
