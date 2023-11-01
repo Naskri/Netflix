@@ -22,5 +22,5 @@ export const initI18N = () => {
 }
 
 export type FlattenTranslations<T, Prefix extends string = ''> = {
-  [K in keyof T]: K extends string ? `${Prefix}${K}` : FlattenTranslations<T[K], `${Prefix}${K}.`>
+  [K in Extract<keyof T, string>]: `${Prefix}${K}`
 }
