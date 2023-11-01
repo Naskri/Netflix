@@ -2,13 +2,19 @@
   "links": {
     "auth-login": "Sign in",
     "auth-register": "Sign up now",
-    "forgot-password": "Send"
+    "forgot-password": "Send",
+    "main-page": "Netflix Home"
   },
   "auth": {
     "forgot": "Forgot password?",
     "forgot-description": "We will send you an email with password reset instructions.",
     "update": "Change password",
     "update-password": "Enter your new password. Remember to validate your data."
+  },
+  "not-found": {
+    "title": "Lost your way?",
+    "description": "Sorry, we can't find that page. You'll find lots to explore on the home page. ",
+    "error": "Error Code"
   },
   "hero": {
     "title": "Enjoy big movies, hit series and more from 29 zł.",

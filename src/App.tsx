@@ -18,6 +18,7 @@ import { CustomModal } from './features/UI/Modal/Modal'
 import { Help } from './pages/Help/Help'
 import { PasswordUpdate } from './features/Account/ForgotPassword/PasswordUpdate/PasswordUpdate'
 import { AccountForgotPassword } from './features/Account/ForgotPassword/AccountForgotPassword'
+import { NotFound } from './pages/NotFound/NotFound'
 
 const queryClient = new QueryClient()
 
@@ -49,6 +50,7 @@ export const App = () => {
             <Route path="" element={<AccountForgotPassword />} />
             <Route path="update" element={<PasswordUpdate />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastContainer />
         {isOpen && createPortal(<CustomModal />, document.querySelector('#modal')!)}

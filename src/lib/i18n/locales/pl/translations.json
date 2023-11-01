@@ -2,13 +2,19 @@
   "links": {
     "auth-login": "Zaloguj się",
     "auth-register": "Zarejestruj się",
-    "forgot-password": "Wyślij"
+    "forgot-password": "Wyślij",
+    "main-page": "Strona główna Netflix"
   },
   "auth": {
     "forgot": "Zapomniałeś hasła do swojego konta?",
     "forgot-description": "Wyślemy do Ciebie wiadomość e-mail z instrukcją resetowania hasła.",
     "update": "Zmień hasło do konta",
     "update-password": "Wpisz nowe hasło. Pamiętaj o walidacji danych."
+  },
+  "not-found": {
+    "title": "Nie ta strona?",
+    "description": "Niestety, nie możemy znaleźć tej strony. Na stronie głównej serwisu znajdziesz mnóstwo filmów, seriali i programów do obejrzenia.",
+    "error": "Kod błędu"
   },
   "hero": {
     "title": "Hity filmowe, popularne seriale i wiele więcej już od 29 zł.",

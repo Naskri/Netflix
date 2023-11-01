@@ -27,6 +27,16 @@
   color: var(--color-black);
 }
 
+.custom-link--not-found:link,
+.custom-link--not-found:visited {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 4px;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .custom-link--cta:link,
 .custom-link--cta:visited {
   display: flex;
