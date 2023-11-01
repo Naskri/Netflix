@@ -29,9 +29,6 @@
 }
 
 @media (max-width: 500px) {
-  .dashboard-hero__content {
-    padding-top: 20rem;
-  }
   .dashboard-hero__title {
     font-size: 2rem;
   }

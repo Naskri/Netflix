@@ -14,10 +14,3 @@
     margin-left: 0;
   }
 }
-
-@media (max-width: 36rem) {
-  .list {
-    grid-row: 3/4;
-    flex-wrap: wrap;
-  }
-}
