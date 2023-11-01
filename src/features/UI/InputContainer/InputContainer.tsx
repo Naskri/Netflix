@@ -2,6 +2,7 @@ import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import styled from './InputContainer.module.css'
 import { VscError } from 'react-icons/vsc'
+import { Errors, Label } from './InputContainer.types'
 
 export enum InputTypes {
   'text' = 'text',
@@ -11,7 +12,7 @@ export enum InputTypes {
 
 type InputContainerProps = {
   id: string
-  label: string
+  label: Label
   error?: string
   type?: InputTypes
   required?: boolean
@@ -37,7 +38,7 @@ export const InputContainer = forwardRef<HTMLInputElement, InputContainerProps>(
         </div>
         {error && (
           <span className={styled.input__error}>
-            <VscError /> {t(error as any)}
+            <VscError /> {t(error as Errors)}
           </span>
         )}
       </div>

@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import styled from './ZPatternItem.module.css'
+import { ZPatternData } from '../ZPatternData'
 
 export type ZPatternItemData = {
   id: number
-  title: string
-  description: string
+  title: (typeof ZPatternData)[number]['title']
+  description: (typeof ZPatternData)[number]['description']
   video?: string
   image?: string
 }

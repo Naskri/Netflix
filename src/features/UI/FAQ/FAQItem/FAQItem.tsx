@@ -2,16 +2,17 @@ import { FiPlus } from 'react-icons/fi'
 import styled from './FAQItem.module.css'
 import { Button } from '../../Button/Button'
 import { useTranslation } from 'react-i18next'
+import { FAQData } from '../FAQData'
 
 type FAQItemDescription = {
   id: number
-  description: string
+  description: (typeof FAQData)[number]['descriptions'][number]['description']
 }
 
 type FAQItemData = {
   id: number
   active: boolean
-  title: string
+  title: (typeof FAQData)[number]['title']
   descriptions: FAQItemDescription[]
 }
 

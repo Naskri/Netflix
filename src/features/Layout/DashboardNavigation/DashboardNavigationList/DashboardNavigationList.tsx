@@ -18,19 +18,19 @@ export const DashboardNavigationList = () => {
 const dashboardNavigationLinks = [
   {
     id: 1,
-    link: 'navigation.movies',
+    link: 'navigation.movies' as const,
     path: '/dashboard/home',
     modifier: 'navigation',
   },
   {
     id: 2,
-    link: 'navigation.series',
+    link: 'navigation.series' as const,
     path: '/dashboard/tv-shows',
     modifier: 'navigation',
   },
   {
     id: 5,
-    link: 'navigation.list',
+    link: 'navigation.list' as const,
     path: '/dashboard/my',
     modifier: 'navigation',
   },
