@@ -57,5 +57,9 @@ export const CustomSwipper = ({ slides, modifier, type }: CustomSwipperProps) =>
 /*
   TODO
 
+  ZMIENIĆ MOJĄ LISTE I ODTWARZANIE VIDEO
+
+  WSTAWIĆ TYPY
+
   QUERY.
 */

@@ -6,5 +6,5 @@ export const MyListMovies = () => {
   const { data: movies } = useMyListMovies()
   const { t } = useTranslation()
 
-  return <MoviesRow data={movies} title={t('movies.list')} /> || null
+  return <MoviesRow data={movies} title={t('movies.list')} type="movie" />
 }

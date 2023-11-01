@@ -44,7 +44,7 @@ export const MoviesItemDetails = ({ item, isHovered, type }: MoviesItemDetailsPr
       />
       <div className={styled.details__content}>
         <div className={styled.details__actions}>
-          <CustomLink path={`/watch/${item.id}?type=${type}`} modifier="play">
+          <CustomLink path={`/watch/${item.custom_id || item.id}?type=${type}`} modifier="play">
             <BsPlay />
           </CustomLink>
 
@@ -59,6 +59,8 @@ export const MoviesItemDetails = ({ item, isHovered, type }: MoviesItemDetailsPr
                   overview: item.overview,
                   genre_ids: JSON.stringify(item.genre_ids),
                   user_id: user?.id,
+                  type,
+                  custom_id: item.id,
                 })
               }
             >
