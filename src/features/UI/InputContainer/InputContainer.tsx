@@ -20,7 +20,7 @@ type InputContainerProps = {
 }
 
 export const InputContainer = forwardRef<HTMLInputElement, InputContainerProps>(
-  ({ id, error, label, ...rest }, ref) => {
+  ({ id, error, label, disabled, ...rest }, ref) => {
     const { t } = useTranslation()
 
     return (
@@ -29,12 +29,17 @@ export const InputContainer = forwardRef<HTMLInputElement, InputContainerProps>(
           <input
             ref={ref}
             id={id}
+            disabled={disabled}
             {...rest}
-            className={`${styled.input} ${error && styled['input--error']}`}
+            className={`${styled.input} ${error && styled['input--error']} ${
+              disabled && styled['input--disabled']
+            }`}
           />
-          <label htmlFor={id} className={styled.input__label}>
-            {t(label)}
-          </label>
+          {!disabled && (
+            <label htmlFor={id} className={styled.input__label}>
+              {t(label)}
+            </label>
+          )}
         </div>
         {error && (
           <span className={styled.input__error}>

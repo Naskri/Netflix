@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query'
-import { getAvatars } from './apiService'
+import { getAvatars } from '../apiService'
 
 export const useAvatars = () => {
   const { data: avatars, isLoading } = useQuery({

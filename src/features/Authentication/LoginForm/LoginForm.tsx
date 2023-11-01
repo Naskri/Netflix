@@ -26,12 +26,7 @@ export const LoginForm = () => {
   })
 
   const submitHandler = ({ email, password }: LoginSchemaType) => {
-    userLogin({ email, password })
-
-    reset({
-      email: '',
-      password: '',
-    })
+    userLogin({ email, password }, { onSuccess: () => reset() })
   }
 
   return (

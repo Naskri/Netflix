@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from 'react-query'
-import { updateAvatar } from './apiService'
+import { updateAvatar } from '../apiService'
 import { toast } from 'react-toastify'
 
 export const useChangeAvatar = () => {

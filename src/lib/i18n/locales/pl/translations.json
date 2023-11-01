@@ -1,7 +1,14 @@
 {
   "links": {
     "auth-login": "Zaloguj się",
-    "auth-register": "Zarejestruj się"
+    "auth-register": "Zarejestruj się",
+    "forgot-password": "Wyślij"
+  },
+  "auth": {
+    "forgot": "Zapomniałeś hasła do swojego konta?",
+    "forgot-description": "Wyślemy do Ciebie wiadomość e-mail z instrukcją resetowania hasła.",
+    "update": "Zmień hasło do konta",
+    "update-password": "Wpisz nowe hasło. Pamiętaj o walidacji danych."
   },
   "hero": {
     "title": "Hity filmowe, popularne seriale i wiele więcej już od 29 zł.",

@@ -1,7 +1,14 @@
 {
   "links": {
     "auth-login": "Sign in",
-    "auth-register": "Sign up now"
+    "auth-register": "Sign up now",
+    "forgot-password": "Send"
+  },
+  "auth": {
+    "forgot": "Forgot password?",
+    "forgot-description": "We will send you an email with password reset instructions.",
+    "update": "Change password",
+    "update-password": "Enter your new password. Remember to validate your data."
   },
   "hero": {
     "title": "Enjoy big movies, hit series and more from 29 zł.",

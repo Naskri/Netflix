@@ -1,5 +1,5 @@
-import { supabaseURL } from '../../lib/i18n/supabase/supabase'
-import { Button } from '../UI/Button/Button'
+import { supabaseURL } from '../../../lib/i18n/supabase/supabase'
+import { Button } from '../../UI/Button/Button'
 import styled from './AccountUpdating.module.css'
 import { useAvatars } from './useAvatars'
 import { useChangeAvatar } from './useChangeAvatar'

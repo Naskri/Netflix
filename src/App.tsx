@@ -15,6 +15,9 @@ import { Watch } from './pages/Watch/Watch'
 import { useModal } from './context/ModalContext'
 import { createPortal } from 'react-dom'
 import { CustomModal } from './features/UI/Modal/Modal'
+import { Help } from './pages/Help/Help'
+import { PasswordUpdate } from './features/Account/ForgotPassword/PasswordUpdate/PasswordUpdate'
+import { AccountForgotPassword } from './features/Account/ForgotPassword/AccountForgotPassword'
 
 const queryClient = new QueryClient()
 
@@ -42,6 +45,10 @@ export const App = () => {
           </Route>
           <Route path="watch/:id" element={<Watch />} />
           <Route path="account" element={<Account />} />
+          <Route path="help" element={<Help />}>
+            <Route path="" element={<AccountForgotPassword />} />
+            <Route path="update" element={<PasswordUpdate />} />
+          </Route>
         </Routes>
         <ToastContainer />
         {isOpen && createPortal(<CustomModal />, document.querySelector('#modal')!)}

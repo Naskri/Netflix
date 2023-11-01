@@ -9,7 +9,7 @@ export const useRegister = () => {
     mutationKey: ['user'],
     mutationFn: ({ email, password }: AuthServiceProps) => register({ email, password }),
     onSuccess: () => {
-      toast.success('User is succesfully created!')
+      toast.success('Confirm user in email!')
       navigate('/login')
     },
     onError: (error) => {

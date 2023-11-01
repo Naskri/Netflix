@@ -16,7 +16,7 @@ export const RegisterForm = () => {
   const { t } = useTranslation()
   const { isRegistering, userRegister } = useRegister()
 
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
 
   const email = searchParams.get('email')
 
@@ -31,17 +31,7 @@ export const RegisterForm = () => {
   })
 
   const submitHandler = ({ email, password }: RegisterSchemaType) => {
-    searchParams.delete('email')
-
-    setSearchParams(searchParams)
-
-    userRegister({ email, password })
-
-    reset({
-      email: '',
-      password: '',
-      passwordConfirm: '',
-    })
+    userRegister({ email, password }, { onSuccess: () => reset() })
   }
 
   return (
