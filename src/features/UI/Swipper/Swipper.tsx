@@ -5,9 +5,10 @@ import 'swiper/css/navigation'
 import styled from './Swipper.module.css'
 import { useRef } from 'react'
 import { MoviesItem } from '../../Movies/MoviesItem/MoviesItem'
+import { MovieSchemaType, MovieSupabaseType } from '../../Movies/MoviesServices/MoviesSchema'
 
 type CustomSwipperProps = {
-  slides: any
+  slides: MovieSchemaType[] | MovieSupabaseType[]
   modifier?: string
   type: 'movie' | 'serie'
 }
@@ -38,9 +39,9 @@ export const CustomSwipper = ({ slides, modifier, type }: CustomSwipperProps) =>
         className={`${styled.customized} swiper-button-prev `}
         onClick={() => sliderRef.current?.slidePrev()}
       ></button>
-      {slides?.map((item: any) => (
+      {slides?.map((item) => (
         <SwiperSlide
-          key={item.id}
+          key={item?.custom_id || item?.id}
           className={`${styled.swiper__slide} ${styled[`swiper__slide--${modifier}`]}`}
         >
           <MoviesItem item={item} type={type} />
@@ -57,9 +58,6 @@ export const CustomSwipper = ({ slides, modifier, type }: CustomSwipperProps) =>
 /*
   TODO
 
-  ZMIENIĆ MOJĄ LISTE I ODTWARZANIE VIDEO
-
-  WSTAWIĆ TYPY
 
   QUERY.
 */

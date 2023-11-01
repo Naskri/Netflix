@@ -11,9 +11,10 @@ import { useDeleteMovie } from '../../MoviesServices/useDeleteMovie'
 import { MoviesItemGenres } from './MoviesItemGenres/MoviesItemGenres'
 import { useTranslation } from 'react-i18next'
 import { CustomLink } from '../../../UI/CustomLink/CustomLink'
+import { MovieSchemaType, MovieSupabaseType } from '../../MoviesServices/MoviesSchema'
 
 type MoviesItemDetailsProps = {
-  item: any
+  item: MovieSchemaType | MovieSupabaseType
   isHovered?: boolean
   type: 'movie' | 'serie'
 }
@@ -48,7 +49,7 @@ export const MoviesItemDetails = ({ item, isHovered, type }: MoviesItemDetailsPr
             <BsPlay />
           </CustomLink>
 
-          {!isInsideList && (
+          {!isInsideList && user && (
             <Button
               modifier="details"
               onClick={() =>
@@ -58,19 +59,19 @@ export const MoviesItemDetails = ({ item, isHovered, type }: MoviesItemDetailsPr
                   vote_average: item.vote_average,
                   overview: item.overview,
                   genre_ids: JSON.stringify(item.genre_ids),
-                  user_id: user?.id,
+                  user_id: user.id,
                   type,
-                  custom_id: item.id,
+                  custom_id: item?.id ?? 0,
                 })
               }
             >
               <AiOutlinePlus />
             </Button>
           )}
-          {isInsideList && (
+          {isInsideList && user && (
             <Button
               modifier="details"
-              onClick={() => deleteMovie(item.original_title || item.name)}
+              onClick={() => deleteMovie({ id: item?.custom_id, userId: user.id })}
             >
               <AiOutlineMinus />
             </Button>

@@ -1,4 +1,6 @@
 import { supabase } from '../../../lib/i18n/supabase/supabase'
+import { MovieSupabaseType, MoviesSchema, MoviesSupabaseSchema } from './MoviesSchema'
+import { DeleteMovieProps } from './useDeleteMovie'
 
 export const getCategoryMovies = async (categoryURL: string) => {
   try {
@@ -16,7 +18,9 @@ export const getCategoryMovies = async (categoryURL: string) => {
 
     const data = await response.json()
 
-    return data.results
+    const parsedData = MoviesSchema.parse(data)
+
+    return parsedData
   } catch (err: unknown) {
     if (err instanceof Error) {
       throw new Error(err.message)
@@ -24,14 +28,12 @@ export const getCategoryMovies = async (categoryURL: string) => {
   }
 }
 
-export const addMovieToList = async (movie: any) => {
-  const { data, error } = await supabase.from('list').insert([movie]).select()
+export const addMovieToList = async (movie: MovieSupabaseType) => {
+  const { error } = await supabase.from('list').insert([movie]).select()
 
   if (error) {
     throw new Error(error.message)
   }
-
-  return data
 }
 
 export const getMovies = async (id: string | undefined) => {
@@ -43,11 +45,15 @@ export const getMovies = async (id: string | undefined) => {
     throw new Error(error.message)
   }
 
-  return list
+  const parsedData = MoviesSupabaseSchema.parse(list)
+
+  return parsedData
 }
 
-export const deleteMovieFromList = async (title: string) => {
-  const { error } = await supabase.from('list').delete().eq('original_title', title)
+export const deleteMovieFromList = async ({ id, userId }: DeleteMovieProps) => {
+  if (!id) return
+
+  const { error } = await supabase.from('list').delete().eq('custom_id', id).eq('user_id', userId)
   if (error) {
     throw new Error(error.message)
   }

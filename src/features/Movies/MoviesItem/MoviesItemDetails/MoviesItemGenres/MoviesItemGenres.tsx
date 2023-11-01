@@ -3,7 +3,7 @@ import styled from './MoviesItemGenres.module.css'
 import { useTranslation } from 'react-i18next'
 
 type MoviesItemGenresProps = {
-  genres: (keyof typeof GENRES)[]
+  genres: string | number[]
 }
 
 export const MoviesItemGenres = ({ genres }: MoviesItemGenresProps) => {

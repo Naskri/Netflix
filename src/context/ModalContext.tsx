@@ -1,19 +1,20 @@
 import { createContext, useContext, ReactNode, useState, useEffect } from 'react'
+import { MovieSchemaType, MovieSupabaseType } from '../features/Movies/MoviesServices/MoviesSchema'
 
 type ModalContextState = {
   isOpen: boolean
   open: (modalContent: any) => void
   close: () => void
-  modalContent: any
+  modalContent: MovieSchemaType | MovieSupabaseType | null
 }
 
 export const ModalContext = createContext<ModalContextState | null>(null)
 
 export const ModalContextProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [modalContent, setModalContent] = useState(null)
+  const [modalContent, setModalContent] = useState<MovieSchemaType | MovieSupabaseType | null>(null)
 
-  const open = (modalContent: any) => {
+  const open = (modalContent: MovieSchemaType | MovieSupabaseType) => {
     setIsOpen(true)
     setModalContent(modalContent)
   }

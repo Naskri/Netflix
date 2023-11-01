@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import styled from './MoviesItem.module.css'
 import { MoviesItemDetails } from './MoviesItemDetails/MoviesItemDetails'
+import { MovieSchemaType, MovieSupabaseType } from '../MoviesServices/MoviesSchema'
 
 type MoviesItemProps = {
-  item: any
+  item: MovieSchemaType | MovieSupabaseType
   type: 'movie' | 'serie'
 }
 
