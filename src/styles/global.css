@@ -17,10 +17,13 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: rgb(20, 20, 20);
+}
+
+#root {
   overflow-x: hidden;
 }
 
-body[data-modal] {
+body[data-modal] #root {
   overflow: hidden;
 }
 

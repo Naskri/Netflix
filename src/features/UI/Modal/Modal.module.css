@@ -17,3 +17,9 @@
   max-width: 640px;
   width: 100%;
 }
+
+@media (max-width: 400px) {
+  .modal__content {
+    padding: 0;
+  }
+}
