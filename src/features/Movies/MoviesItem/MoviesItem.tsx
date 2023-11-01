@@ -14,7 +14,6 @@ export const MoviesItem = ({ item, type }: MoviesItemProps) => {
   return (
     <div
       className={styled.movie}
-      onClick={() => setIsHovered((prev) => !prev)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
