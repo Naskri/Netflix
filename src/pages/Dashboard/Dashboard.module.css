@@ -8,3 +8,9 @@
   margin-top: -15rem;
   padding-bottom: 10rem;
 }
+
+@media (max-width: 400px) {
+  .dashboard__rest {
+    padding-bottom: 3rem;
+  }
+}

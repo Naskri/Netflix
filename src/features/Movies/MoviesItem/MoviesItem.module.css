@@ -1,5 +1,6 @@
 .movie {
   height: 100%;
+  cursor: pointer;
 }
 
 .movie--active {
