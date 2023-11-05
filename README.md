@@ -1,7 +1,7 @@
-<h3 align="center">Netflix Clone - Watch movies and series!</h3>
+<h3 align="center">Nuxt - Watch movies and series!</h3>
 
   <p align="center">
-    Netflix Clone
+    Nuxt
     <br />
     <a href="https://netflix-naskri.vercel.app/">View Demo</a>
   </p>
@@ -74,7 +74,7 @@ Follow the example
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Naskri/Netflix.git
+   git clone https://github.com/Naskri/Nuxt.git
    ```
 2. Install dependencies
 
@@ -106,6 +106,6 @@ Follow the example
 
 ## Contact
 
-Project Link: [https://github.com/Naskri/Netflix](https://github.com/Naskri/Netflix)
+Project Link: [https://github.com/Naskri/Nuxt](https://github.com/Naskri/Nuxt)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
