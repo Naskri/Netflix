@@ -1,7 +1,5 @@
 .logo {
-  fill: var(--color-primary);
-  width: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-transform: uppercase;
 }

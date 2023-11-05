@@ -3,7 +3,7 @@
     "auth-login": "Zaloguj się",
     "auth-register": "Zarejestruj się",
     "forgot-password": "Wyślij",
-    "main-page": "Strona główna Netflix"
+    "main-page": "Strona główna Nuxt"
   },
   "auth": {
     "forgot": "Zapomniałeś hasła do swojego konta?",
@@ -45,20 +45,20 @@
     "description4": "Pozwól dzieciom przeżywać przygody w towarzystwie uwielbianych bohaterów — w specjalnej sekcji serwisu oferowanej bezpłatnie w ramach członkostwa."
   },
   "faq": {
-    "title1": "Czym jest Netflix?",
-    "description1": "Netflix to usługa przesyłania strumieniowego, dzięki której użytkownicy mogą korzystać z szerokiej oferty nagradzanych filmów, seriali, programów, anime oraz produkcji dokumentalnych za pośrednictwem tysięcy urządzeń połączonych z internetem.",
+    "title1": "Czym jest Nuxt?",
+    "description1": "Nuxt to usługa przesyłania strumieniowego, dzięki której użytkownicy mogą korzystać z szerokiej oferty nagradzanych filmów, seriali, programów, anime oraz produkcji dokumentalnych za pośrednictwem tysięcy urządzeń połączonych z internetem.",
     "subdescription1": "Możesz oglądać do woli, gdziekolwiek jesteś — bez reklam i za jedną miesięczną opłatą. Co tydzień dodajemy nowe tytuły, więc zawsze jest coś ciekawego do obejrzenia.",
-    "title2": "Ile kosztuje korzystanie z serwisu Netflix?",
-    "description2": "Oglądaj materiały z serwisu Netflix na smartfonie, tablecie, telewizorze Smart TV, laptopie lub innym urządzeniu do odtwarzania — za jedną stałą opłatą miesięczną. Mamy plany w cenie od 29 zł do 60 zł miesięcznie. Bez dodatkowych kosztów i bez umów.",
+    "title2": "Ile kosztuje korzystanie z serwisu Nuxt?",
+    "description2": "Oglądaj materiały z serwisu Nuxt na smartfonie, tablecie, telewizorze Smart TV, laptopie lub innym urządzeniu do odtwarzania — za jedną stałą opłatą miesięczną. Mamy plany w cenie od 29 zł do 60 zł miesięcznie. Bez dodatkowych kosztów i bez umów.",
     "title3": "Gdzie mogę oglądać?",
     "description3": "Oglądaj, gdzie i kiedy chcesz. Zaloguj się za pomocą danych swojego konta w witrynie netflix.com na komputerze lub na innym urządzeniu z dostępem do Internetu i zainstalowaną aplikacją Netflix, takim jak telewizor Smart TV, smartfon, tablet, odtwarzacz multimedialny czy konsola do gier.",
     "subdescription3": "Możesz także pobierać ulubione programy na urządzenia przenośne z systemem iOS lub Android oraz na urządzenia z aplikacją dla systemu Windows 10. Pobrane tytuły możesz oglądać poza domem, bez połączenia z internetem. Korzystaj z serwisu Netflix, gdzie tylko chcesz.",
     "title4": "Jak zrezygnować z członkostwa?",
-    "description4": "Netflix niczego nie narzuca. Żadnych zbędnych umów ani zobowiązań. Możesz w łatwy sposób anulować członkostwo online — wystarczą dwa kliknięcia. Nie naliczamy opłat za rezygnację, dlatego możesz rozpocząć członkostwo i zrezygnować z niego w dowolnej chwili.",
-    "title5": "Jakie materiały mogę oglądać w serwisie Netflix?",
-    "description5": "Serwis Netflix oferuje dostęp do obszernej biblioteki zawierającej filmy pełnometrażowe i dokumentalne, seriale, programy, anime, nagradzane Netflix Originals i nie tylko. Oglądaj do woli, kiedy tylko chcesz.",
-    "title6": "Czy Netflix jest odpowiedni dla dzieci?",
-    "description6": "W ramach członkostwa w serwisie Netflix otrzymujesz dostęp do specjalnej sekcji dla dzieci. Młodzi widzowie mogą oglądać tam filmy, seriale i programy przeznaczone właśnie dla nich, a rodzice mają nad wszystkim kontrolę.",
+    "description4": "Nuxt niczego nie narzuca. Żadnych zbędnych umów ani zobowiązań. Możesz w łatwy sposób anulować członkostwo online — wystarczą dwa kliknięcia. Nie naliczamy opłat za rezygnację, dlatego możesz rozpocząć członkostwo i zrezygnować z niego w dowolnej chwili.",
+    "title5": "Jakie materiały mogę oglądać w serwisie Nuxt?",
+    "description5": "Serwis Nuxt oferuje dostęp do obszernej biblioteki zawierającej filmy pełnometrażowe i dokumentalne, seriale, programy, anime, nagradzane Netflix Originals i nie tylko. Oglądaj do woli, kiedy tylko chcesz.",
+    "title6": "Czy Nuxt jest odpowiedni dla dzieci?",
+    "description6": "W ramach członkostwa w serwisie Nuxt otrzymujesz dostęp do specjalnej sekcji dla dzieci. Młodzi widzowie mogą oglądać tam filmy, seriale i programy przeznaczone właśnie dla nich, a rodzice mają nad wszystkim kontrolę.",
     "subdescription6": "Profile dla dzieci chronione są kodem PIN kontroli rodzicielskiej, który uniemożliwia dostęp do treści przekraczających określone kategorie wiekowe, a także pozwala blokować konkretne tytuły."
   },
   "form": {
@@ -66,8 +66,8 @@
     "passwordLabel": "Hasło",
     "passwordConfirmLabel": "Hasło potwierdzające",
     "help": "Potrzebujesz pomocy?",
-    "helpRegister": "Nie masz jeszcze konta w serwisie Netflix?",
-    "helpLogin": "Masz już konto w Netflix?"
+    "helpRegister": "Nie masz jeszcze konta w serwisie Nuxt?",
+    "helpLogin": "Masz już konto w Nuxt?"
   },
   "navigation": {
     "movies": "Filmy",
@@ -82,7 +82,7 @@
   "movies": {
     "vote": "Średnia ocena",
     "list": "Twoja lista",
-    "popular": "Popularne na Netflix",
+    "popular": "Popularne na Nuxt",
     "horror": "Horrory",
     "upcoming": "Nadchodzące",
     "comedies": "Komedie",
@@ -91,7 +91,7 @@
     "not-video": "Nie znaleziono video"
   },
   "series": {
-    "popular": "Popularne na Netflix",
+    "popular": "Popularne na Nuxt",
     "action": "Seriale akcji",
     "top": "Nawyżej oceniane",
     "comedies": "Komedie",
