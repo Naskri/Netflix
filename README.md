@@ -3,7 +3,7 @@
   <p align="center">
     Nuxt
     <br />
-    <a href="https://netflix-naskri.vercel.app/">View Demo</a>
+    <a href="https://nuxt-theta-sandy.vercel.app/">View Demo</a>
   </p>
 </div>
 
